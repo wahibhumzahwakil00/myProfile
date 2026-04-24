@@ -1,545 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Wahib Humzahoo | InfoSec & VAPT Specialist</title>
-  <!-- Google Fonts & Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Wahib Humzahoo | InfoSec Consultant & VAPT Specialist</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at 10% 20%, #0a0f1c, #03060c);
-      color: #eef5ff;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0c15;
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-    /* custom scroll */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0f172a;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #2dd4bf;
-      border-radius: 10px;
-    }
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #10131f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a3a6e;
+            border-radius: 10px;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
 
-    /* glass navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: rgba(5, 10, 20, 0.75);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(45, 212, 191, 0.2);
-      z-index: 100;
-      padding: 1rem 0;
-    }
+        /* Glassmorphism / cards */
+        .glass-card {
+            background: rgba(18, 22, 40, 0.65);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(56, 78, 130, 0.3);
+            border-radius: 28px;
+            transition: all 0.25s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(79, 139, 224, 0.6);
+            box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.4);
+        }
 
-    .nav-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .badge {
+            background: #0e1a2f;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #9bbdff;
+            border: 0.5px solid #2c416e;
+            display: inline-block;
+        }
 
-    .logo {
-      font-weight: 800;
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, #2dd4bf, #3b82f6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.5px;
-    }
+        .gradient-text {
+            background: linear-gradient(135deg, #c0e0ff, #6c9eff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
+        /* navigation */
+        .nav-links a {
+            color: #cbd5ff;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: white;
+            text-shadow: 0 0 5px #3b82f6;
+        }
 
-    .nav-links a {
-      color: #cbd5e6;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.2s;
-      font-size: 0.95rem;
-    }
+        .btn-outline-light {
+            border: 1px solid #3b5b9e;
+            background: transparent;
+            padding: 10px 22px;
+            border-radius: 40px;
+            color: #e0edff;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-outline-light:hover {
+            background: #1e2a4e;
+            border-color: #6d94e0;
+            transform: translateY(-2px);
+        }
 
-    .nav-links a:hover {
-      color: #2dd4bf;
-    }
+        .stat-card {
+            background: #0f1322;
+            border-radius: 2rem;
+            padding: 1.6rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid #2f4b8c;
+        }
 
-    /* buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(45, 212, 191, 0.1);
-      padding: 0.7rem 1.5rem;
-      border-radius: 40px;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      transition: 0.25s;
-      border: 1px solid rgba(45, 212, 191, 0.4);
-    }
+        .skill-tag {
+            background: #111827;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #bdd4ff;
+            border: 1px solid #283656;
+        }
 
-    .btn-primary {
-      background: linear-gradient(105deg, #2dd4bf, #1e7b6e);
-      border: none;
-      box-shadow: 0 8px 20px rgba(45, 212, 191, 0.25);
-    }
+        .timeline-item {
+            border-left: 2px solid #2f4b8c;
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 2.2rem;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            background: #4f8be0;
+            border-radius: 50%;
+            border: 2px solid #0a0c15;
+        }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(45, 212, 191, 0.35);
-    }
+        .engagement-card {
+            background: rgba(12, 16, 28, 0.7);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid #293759;
+            transition: 0.2s;
+        }
+        .engagement-card i {
+            color: #608cff;
+        }
 
-    .btn-outline {
-      border: 1px solid #2dd4bf;
-      background: transparent;
-    }
+        footer {
+            border-top: 1px solid #1e2742;
+        }
 
-    .btn-outline:hover {
-      background: rgba(45, 212, 191, 0.15);
-      border-color: #5eead4;
-    }
-
-    /* hero */
-    .hero {
-      padding: 5rem 0 3rem;
-    }
-
-    .hero-grid {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .hero-content h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-
-    .highlight {
-      color: #2dd4bf;
-    }
-
-    .hero-tag {
-      background: rgba(45, 212, 191, 0.15);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 1.2rem;
-      backdrop-filter: blur(4px);
-    }
-
-    .hero-desc {
-      font-size: 1.1rem;
-      color: #b9c7e6;
-      max-width: 600px;
-      margin: 1.2rem 0 1.8rem;
-    }
-
-    /* stat cards */
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 3rem;
-      justify-content: space-between;
-    }
-
-    .stat-glow {
-      background: rgba(15, 25, 45, 0.6);
-      backdrop-filter: blur(8px);
-      border-radius: 28px;
-      padding: 1.2rem 1.8rem;
-      text-align: center;
-      flex: 1;
-      min-width: 130px;
-      border: 1px solid rgba(45, 212, 191, 0.3);
-      transition: 0.2s;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #2dd4bf;
-    }
-
-    /* sections */
-    section {
-      padding: 4rem 0;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 2.5rem;
-      display: inline-block;
-      background: linear-gradient(120deg, #fff, #2dd4bf);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.3px;
-    }
-
-    /* experience cards */
-    .exp-card {
-      background: rgba(10, 18, 30, 0.65);
-      backdrop-filter: blur(4px);
-      border-radius: 28px;
-      padding: 1.8rem;
-      margin-bottom: 1.8rem;
-      border: 1px solid rgba(45, 212, 191, 0.2);
-      transition: all 0.25s;
-    }
-
-    .exp-card:hover {
-      border-color: rgba(45, 212, 191, 0.5);
-      transform: translateY(-3px);
-    }
-
-    .exp-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1rem;
-    }
-
-    .exp-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .exp-company {
-      color: #2dd4bf;
-      font-weight: 600;
-    }
-
-    .exp-list {
-      margin-top: 1rem;
-      padding-left: 1.2rem;
-    }
-
-    .exp-list li {
-      margin-bottom: 0.6rem;
-      color: #cddcff;
-    }
-
-    /* skill clouds */
-    .skills-wrapper {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 2rem;
-      padding: 2rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .skill-category {
-      margin-bottom: 2rem;
-    }
-
-    .skill-category h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #a5f3fc;
-    }
-
-    .badge-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-    }
-
-    .skill-badge {
-      background: rgba(45, 212, 191, 0.12);
-      border-radius: 40px;
-      padding: 0.45rem 1.2rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border-left: 2px solid #2dd4bf;
-      transition: 0.2s;
-    }
-
-    /* certs grid */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin-top: 1rem;
-    }
-
-    .glass-card {
-      background: rgba(10, 20, 32, 0.55);
-      backdrop-filter: blur(8px);
-      border-radius: 28px;
-      padding: 1.6rem;
-      border: 1px solid rgba(45, 212, 191, 0.25);
-    }
-
-    .contact-area {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      background: rgba(8, 16, 26, 0.7);
-      backdrop-filter: blur(12px);
-      border-radius: 2rem;
-      padding: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid rgba(45, 212, 191, 0.2);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 780px) {
-      .hero-content h1 {
-        font-size: 2.4rem;
-      }
-      .nav-flex {
-        flex-direction: column;
-      }
-      .stats-row {
-        flex-direction: column;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="container nav-flex">
-    <div class="logo">WAHIB<span style="color:#2dd4bf;">.sec</span></div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#exp">Experience</a>
-      <a href="#skills">Skillset</a>
-      <a href="#creds">Credentials</a>
-      <a href="#connect">Connect</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="hero-tag"><i class="fas fa-shield-hog"></i> Information Security Consultant | VAPT Specialist</div>
-        <h1>Wahib Humzah<br><span class="highlight">Application & AI Security</span></h1>
-        <p class="hero-desc">
-          4+ years of hands-on experience in Web, API, Mobile, Network & AI security testing. 
-          Trusted by Central Government & private banking sectors. Expert in manual pentesting, 
-          business logic flaws, GRC audits (ISO 27001, RBI framework), and zero‑day discovery.
-        </p>
+    <!-- Navigation -->
+    <nav class="container" style="padding-top: 24px; padding-bottom: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
         <div>
-          <a href="#connect" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contact Me</a>
-          <a href="#exp" class="btn btn-outline" style="margin-left: 12px;"><i class="fas fa-chevron-right"></i> Work History</a>
+            <span class="badge"><i class="fas fa-shield-alt" style="margin-right: 6px;"></i> InfoSec Consultant</span>
+            <span class="badge" style="margin-left: 10px;"><i class="fas fa-user-secret"></i> VAPT Specialist</span>
         </div>
-      </div>
-      <div class="stats-row" style="margin-top:0; flex:1; min-width:240px;">
-        <div class="stat-glow"><div class="stat-number">120+</div><div>Web Apps</div></div>
-        <div class="stat-glow"><div class="stat-number">50+</div><div>Mobile Apps</div></div>
-        <div class="stat-glow"><div class="stat-number">40+</div><div>APIs</div></div>
-        <div class="stat-glow"><div class="stat-number">4 Y</div><div>Exp.</div></div>
-      </div>
+        <div class="nav-links" style="display: flex; gap: 28px;">
+            <a href="#home">Home</a>
+            <a href="#exp">Experience</a>
+            <a href="#clients">Clients</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="#" class="btn-outline-light" style="font-size: 0.85rem;"><i class="fas fa-download"></i> Resume (PDF)</a>
+    </nav>
+
+    <!-- Hero / Profile Section -->
+    <section id="home" class="container" style="margin-top: 20px; margin-bottom: 48px;">
+        <div class="glass-card" style="padding: 36px 32px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
+                <div style="flex: 2;">
+                    <h1 style="font-size: 2.7rem; font-weight: 700; letter-spacing: -0.02em;">Wahib Humzahoo</h1>
+                    <p style="font-size: 1.3rem; font-weight: 500; margin-top: 8px; color: #b9d0ff;"><i class="fas fa-shield-haltered"></i> Information Security Consultant | Application Security & VAPT</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 18px; margin: 20px 0 16px;">
+                        <span><i class="fas fa-map-marker-alt" style="color: #5f8eff;"></i> New Delhi, India</span>
+                        <span><i class="fas fa-phone-alt"></i> +91-8800741590</span>
+                        <span><i class="fas fa-envelope"></i> wahib.humzahoo@gmail.com</span>
+                    </div>
+                    <p style="max-width: 85%; margin-bottom: 20px;">Information Security Consultant with <strong class="gradient-text">4+ years of hands-on experience</strong> in Application Security, VAPT, API & Mobile security. Specializing in manual pentesting, business logic flaws, and AI security testing. Trusted by Central Government & leading banks.</p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                        <span class="badge"><i class="fab fa-js"></i> CEH Certified</span>
+                        <span class="badge"><i class="fas fa-laptop-code"></i> OWASP Top10</span>
+                        <span class="badge"><i class="fas fa-cloud-upload-alt"></i> MITRE ATT&CK</span>
+                    </div>
+                </div>
+                <div style="flex: 0.8; text-align: center;">
+                    <div style="background: linear-gradient(145deg, #10172b, #070b14); border-radius: 50%; padding: 8px; width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fas fa-user-astronaut" style="font-size: 5rem; color: #5c8eff;"></i>
+                    </div>
+                    <p style="margin-top: 14px; font-weight: 500;">⭐ 4+ Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Key Metrics -->
+    <div class="container" style="margin-bottom: 50px;">
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 22px;">
+            <div class="stat-card"><i class="fas fa-globe" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">120+</h2><p>Web Applications tested</p></div>
+            <div class="stat-card"><i class="fas fa-mobile-alt" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">50+</h2><p>Mobile Apps (iOS/Android)</p></div>
+            <div class="stat-card"><i class="fas fa-plug" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">40+</h2><p>APIs (REST/SOAP)</p></div>
+            <div class="stat-card"><i class="fas fa-building" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">25+</h2><p>Enterprise Engagements</p></div>
+        </div>
     </div>
-  </section>
 
-  <!-- mini profile quote -->
-  <div class="container" style="margin-top: -2rem; margin-bottom: 1rem;">
-    <div style="background: linear-gradient(110deg, #0a1020, #050b14); border-radius: 2rem; padding: 1.5rem 2rem; border-left: 5px solid #2dd4bf;">
-      <i class="fas fa-quote-left" style="color:#2dd4bf; margin-right: 12px;"></i> 
-      Deep expertise in manual penetration testing, API abuse, mobile security, and vulnerability remediation. 
-      Currently deployed at NIC (Central Government) performing continuous security assessments of high‑stakes citizen‑facing portals and AI applications.
+    <!-- Work Experience Section (Total 4+ Years) -->
+    <section id="exp" class="container" style="margin-bottom: 60px;">
+        <div style="text-align: center; margin-bottom: 42px;">
+            <h2 style="font-size: 2rem; font-weight: 700;"><span class="gradient-text">Professional Journey</span> &nbsp;| 4+ Years Experience</h2>
+            <p style="color: #a6b9e6;">End-to-end VAPT, manual pentesting, and security advisory for critical environments</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- Timeline role 1: Secureyes + NIC (current) -->
+            <div class="timeline-item">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">Associate Information Security Consultant</h3>
+                    <span class="badge">Oct 2024 – Present</span>
+                </div>
+                <p style="color: #bfd6ff; margin: 4px 0 4px;"><i class="fas fa-building"></i> Secureyes, Bhubaneswar | <strong>Client Deployment: NIC – Application Security Division (New Delhi)</strong></p>
+                <ul style="margin-top: 12px; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff; width: 22px;"></i> Deep-dive manual penetration testing of high-stakes citizen-facing web portals & intranet apps serving millions.</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> Multi-platform VAPT: Web, Android/iOS mobile apps, REST/SOAP APIs – uncovered business logic flaws & potential zero-day vectors.</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> GRC compliance audits (ISO 27001, NICNET Cyber Security Framework, Aadhaar compliance).</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> <strong>AI Security Testing:</strong> Conducted red-team style testing on AI-driven applications and mitigation strategies.</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> Authored enterprise-grade VAPT reports with risk prioritization and strategic recommendations for senior government stakeholders.</li>
+                </ul>
+                <div style="margin-top: 12px; background: #0d1224; border-radius: 20px; padding: 10px 16px;">
+                    <span style="font-weight: 600;"><i class="fas fa-briefcase"></i> Previous Client Engagements at Secureyes:</span>
+                    <p>✔ Central Government critical webapps (business logic & misconfigurations) <br> ✔ Private Banking: internal platforms, banking APIs, mobile banking apps (Android/iOS) VAPT.<br> ✔ API security assessments (authentication, mass assignment, IDOR). <br> ✔ Vulnerability remediation lifecycle and revalidation.</p>
+                </div>
+            </div>
+            <!-- role 2: Edukemy -->
+            <div class="timeline-item">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">Associate Security Engineer</h3>
+                    <span class="badge">Feb 2023 – Sep 2024</span>
+                </div>
+                <p><i class="fas fa-chalkboard-teacher"></i> Edukemy, New Delhi</p>
+                <ul style="margin-top: 10px; list-style: none;">
+                    <li><i class="fas fa-angle-right"></i> Manual + automated web & API penetration testing; discovered authentication bypass, privilege escalation, and injection flaws.</li>
+                    <li><i class="fas fa-angle-right"></i> Validated automated findings, delivered detailed risk-assessed reports, and assisted dev teams with secure remediation.</li>
+                    <li><i class="fas fa-angle-right"></i> Conducted vulnerability revalidation and integration of security into SDLC for production apps.</li>
+                </ul>
+            </div>
+            <!-- role 3: Cloud Sufi (Trainee + Junior Engineer) -->
+            <div class="timeline-item">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">Junior Associate & Trainee (InfoSec Engineer)</h3>
+                    <span class="badge">Jan 2022 – Jan 2023</span>
+                </div>
+                <p><i class="fas fa-cloud"></i> Cloud Sufi, Noida</p>
+                <ul style="margin-top: 10px; list-style: none;">
+                    <li><i class="fas fa-angle-right"></i> Trained in VAPT methodologies & OWASP Top10; performed scanning & manual validation with Burp Suite, Nmap.</li>
+                    <li><i class="fas fa-angle-right"></i> Assisted in API security testing, report preparation and revalidation of security fixes.</li>
+                    <li><i class="fas fa-angle-right"></i> Security tooling & automation scripting (Bash, Python).</li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top: 24px; background: linear-gradient(90deg, #10172a, #0a0e1c); border-radius: 30px; padding: 20px; text-align: center;">
+            <i class="fas fa-chart-line" style="font-size: 1.4rem;"></i> <strong>Total Experience:</strong> 4 years+ in VAPT, application security, and GRC consulting.
+        </div>
+    </section>
+
+    <!-- DETAILED CLIENT ENGAGEMENTS section as requested -->
+    <section id="clients" class="container" style="margin-bottom: 60px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 2rem; font-weight: 700;"><span class="gradient-text">Key Client Engagements</span> & Government Projects</h2>
+            <p>Trusted by Central Government, Banking, and Enterprise sectors for high-stakes security assessments</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div class="engagement-card">
+                <i class="fas fa-university" style="font-size: 2rem;"></i>
+                <h3 style="margin: 16px 0 8px;">Central Government (NIC)</h3>
+                <p>Continuous security assessments of citizen-facing portals, internal intranet systems & APIs used by millions. Executed manual deep-dive testing uncovering complex business logic flaws, privilege escalation, and potential zero-days. Also GRC audits against ISO 27001 & NIC cyber framework.</p>
+                <div style="margin-top: 14px;"><span class="badge">📍 New Delhi (On-site)</span></div>
+            </div>
+            <div class="engagement-card">
+                <i class="fas fa-landmark" style="font-size: 2rem;"></i>
+                <h3 style="margin: 16px 0 8px;">Private Banking Sector</h3>
+                <p>Comprehensive VAPT for internal banking applications, core banking APIs, and mobile banking platforms (Android/iOS). Tested for authentication bypass, mass assignment, insecure data storage and API abuse patterns. Delivered risk-based remediation roadmap.</p>
+                <div style="margin-top: 14px;"><span class="badge"><i class="fas fa-credit-card"></i> RBI Cybersecurity framework aligned</span></div>
+            </div>
+            <div class="engagement-card">
+                <i class="fas fa-robot" style="font-size: 2rem;"></i>
+                <h3 style="margin: 16px 0 8px;">AI Security & Emerging Tech</h3>
+                <p>Pioneered AI application security testing: prompt injection, model manipulation, adversarial testing, and security hardening. Collaborated with stakeholders to integrate AI-specific risk mitigation at government site.</p>
+                <div style="margin-top: 14px;"><span class="badge">🔐 AI/ML threat modeling</span></div>
+            </div>
+            <div class="engagement-card">
+                <i class="fas fa-chalkboard-user" style="font-size: 2rem;"></i>
+                <h3 style="margin: 16px 0 8px;">EdTech & Enterprise Platforms</h3>
+                <p>Performed end-to-end web & API penetration testing for Edukemy, covering authentication, authorisation, input validation and business logic abuse, plus post-fix revalidation and secure SDLC training.</p>
+                <div style="margin-top: 14px;"><span class="badge">✨ 40+ APIs tested</span></div>
+            </div>
+        </div>
+        <!-- additional highlights -->
+        <div style="margin-top: 32px; background: #0c1122; border-radius: 24px; padding: 20px 24px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;">
+                <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>120+ Web apps</strong> | complete life cycle VAPT</div>
+                <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>50+ Mobile apps</strong> | OWASP MSTG</div>
+                <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>40+ APIs</strong> (REST/SOAP/GraphQL)</div>
+                <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>Zero-day discovery</strong> mindset & manual logic flaws</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills, Tools & Certifications -->
+    <section id="skills" class="container" style="margin-bottom: 60px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+            <!-- left side: core skills -->
+            <div class="glass-card" style="padding: 28px;">
+                <h3><i class="fas fa-cogs"></i> Technical Arsenal</h3>
+                <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span class="skill-tag">Burp Suite Pro</span><span class="skill-tag">Nmap</span><span class="skill-tag">SQLmap</span>
+                    <span class="skill-tag">MobSF</span><span class="skill-tag">ADB</span><span class="skill-tag">OWASP ZAP</span>
+                    <span class="skill-tag">Metasploit</span><span class="skill-tag">Android Studio</span><span class="skill-tag">MEMU</span>
+                    <span class="skill-tag">Python/Bash</span><span class="skill-tag">JavaScript</span><span class="skill-tag">MITRE ATT&CK</span>
+                </div>
+                <hr style="margin: 26px 0; border-color: #212d4f;">
+                <h3><i class="fas fa-shield-virus"></i> VAPT & AppSec Specialties</h3>
+                <ul style="margin-top: 12px; list-style: none;">
+                    <li>✔ Manual Penetration Testing (Gray-box / Black-box)</li>
+                    <li>✔ Business Logic Flaw Analysis & Zero-day approach</li>
+                    <li>✔ OWASP Top10 (Web, API, Mobile) & MASVS</li>
+                    <li>✔ Security Hardening & Vulnerability Prioritization</li>
+                    <li>✔ GRC Audits (ISO 27001, RBI framework)</li>
+                </ul>
+            </div>
+            <!-- right side: certs + education -->
+            <div class="glass-card" style="padding: 28px;">
+                <h3><i class="fas fa-certificate"></i> Certifications & Accreditations</h3>
+                <div style="margin: 18px 0;">
+                    <p><i class="fab fa-empire"></i> <strong>CEH v12</strong> – Certified Ethical Hacker (EC-Council) | Nov 2025</p>
+                    <p><i class="fas fa-shield-alt"></i> <strong>CSCP</strong> – Cyber Security Certification Program (Secureyes) 2024</p>
+                    <p><i class="fas fa-network-wired"></i> <strong>CCNA Security</strong> – Cisco Certified Network Associate Security (2021)</p>
+                </div>
+                <hr style="margin: 20px 0; border-color: #212d4f;">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p><strong>B.Tech (Computer Sciences)</strong> – Manav Rachna University, Faridabad <br> CGPA: 7.6 | 2018-2022</p>
+                <div style="margin-top: 20px;">
+                    <span class="badge"><i class="fas fa-award"></i> Aadhaar Compliance</span>
+                    <span class="badge"><i class="fas fa-chart-line"></i> RBI Cyber Framework</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Security Engagements Highlights -->
+    <div class="container" style="margin-bottom: 56px;">
+        <div style="background: radial-gradient(circle at 10% 30%, #10172f, #060914); border-radius: 2rem; padding: 28px 32px;">
+            <h3 style="font-size: 1.7rem; text-align: center;"><i class="fas fa-chart-simple"></i> Proven Delivery Across Critical Sectors</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 20px; margin-top: 30px;">
+                <div><i class="fas fa-check-double"></i> Government Digital Portfolios (NIC, e-governance)</div>
+                <div><i class="fas fa-check-double"></i> Private Banking & Financial APIs</div>
+                <div><i class="fas fa-check-double"></i> Public-facing mobile apps & internal platforms</div>
+                <div><i class="fas fa-check-double"></i> AI-driven application security & mitigation</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Experience section -->
-  <section id="exp">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+    <!-- contact section & footer -->
+    <section id="contact" class="container" style="margin-bottom: 40px;">
+        <div class="glass-card" style="padding: 32px; text-align: center;">
+            <h2>Let's Secure Your Digital Ecosystem</h2>
+            <p style="max-width: 580px; margin: 12px auto;">Open for consulting, VAPT engagements, and security auditing. Reach out for high-assurance testing.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-top: 28px;">
+                <div><i class="fas fa-envelope fa-lg"></i> wahib.humzahoo@gmail.com</div>
+                <div><i class="fas fa-phone-alt"></i> +91-8800741590</div>
+                <div><i class="fas fa-map-pin"></i> New Delhi - 68, India</div>
+            </div>
+            <div style="margin-top: 28px;">
+                <a href="#" style="color: #a0bbff; margin: 0 12px;"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" style="color: #a0bbff; margin: 0 12px;"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#" style="color: #a0bbff; margin: 0 12px;"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
 
-      <div class="exp-card">
-        <div class="exp-header">
-          <div><span class="exp-title">Associate Information Security Consultant</span> <span class="exp-company">@ Secureyes</span></div>
-          <div style="font-size: 0.85rem; color: #94a3b8;">Oct 2024 – Present</div>
+    <footer style="text-align: center; padding: 32px 0 28px; font-size: 0.85rem; color: #8091c2;">
+        <div class="container">
+            <p>© 2026 Wahib Humzahoo – Information Security Consultant | 4+ Years Experience, VAPT & Application Security Specialist</p>
+            <p style="margin-top: 8px;"><i class="fas fa-shield-haltered"></i> OWASP Top 10 | Manual Pentesting | API | Mobile | GRC</p>
         </div>
-        <div><span class="exp-company">Current: Junior Security Analyst (NIC - Application Security Division) | New Delhi</span></div>
-        <ul class="exp-list">
-          <li><i class="fas fa-angle-right" style="color:#2dd4bf;"></i> Deep-dive manual pentesting of citizen‑facing web portals & APIs (millions of users) – uncovering business logic flaws and potential zero‑days.</li>
-          <li><i class="fas fa-angle-right" style="color:#2dd4bf;"></i> Multi-platform VAPT: Web, Android/iOS mobile apps, REST/SOAP APIs (auth bypass, mass assignment, injections).</li>
-          <li><i class="fas fa-angle-right" style="color:#2dd4bf;"></i> GRC audits against ISO 27001, NICNET Cyber Security Framework, Aadhaar compliance, and delivering strategic reports to senior stakeholders.</li>
-          <li><i class="fas fa-angle-right" style="color:#2dd4bf;"></i> AI application security testing & mitigation, secure coding training for client teams.</li>
-        </ul>
-        <div class="exp-company">Previous Client Engagements:</div>
-        <ul class="exp-list">
-          <li>Central Government web applications + Private Banking Sector (internal banking apps, banking APIs, Android mobile banking).</li>
-          <li>API security assessments, mobile insecure data storage, manual validation, remediation revalidation.</li>
-        </ul>
-      </div>
+    </footer>
 
-      <div class="exp-card">
-        <div class="exp-header">
-          <div><span class="exp-title">Associate Security Engineer</span> <span class="exp-company">@ Edukemy</span></div>
-          <div style="font-size: 0.85rem; color: #94a3b8;">Feb 2023 – Sept 2024</div>
-        </div>
-        <ul class="exp-list">
-          <li>Web & API penetration testing (manual + automated): authentication, authorisation flaws, input validation, security misconfigurations.</li>
-          <li>Validated automated scan findings, prepared detailed vulnerability assessment reports with risk ratings, supported dev teams in remediation.</li>
-          <li>Performed revalidation after patches and promoted secure SDLC practices.</li>
-        </ul>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-header">
-          <div><span class="exp-title">Trainee / Junior InfoSec Engineer</span> <span class="exp-company">@ Cloud Sufi</span></div>
-          <div style="font-size: 0.85rem; color: #94a3b8;">Jan 2022 – Jan 2023</div>
-        </div>
-        <ul class="exp-list">
-          <li>Training in VAPT methodologies, OWASP Top 10, manual validation, Burp Suite, Nmap, SQLmap.</li>
-          <li>Assisted web & API vulnerability assessments, VAPT report preparation and vulnerability revalidation.</li>
-        </ul>
-      </div>
-      <p style="margin-top: 0.5rem; background: rgba(45,212,191,0.1); display: inline-block; padding: 5px 18px; border-radius: 40px;"><i class="fas fa-chart-line"></i> Total experience: 3 years 11 months (incl. training) | Relevant VAPT: 3 years 5 months</p>
-    </div>
-  </section>
-
-  <!-- Skills section with categories -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-microchip"></i> Technical Arsenal</h2>
-      <div class="skills-wrapper">
-        <div class="skill-category">
-          <h3><i class="fas fa-globe"></i> Application Security</h3>
-          <div class="badge-container">
-            <span class="skill-badge">Web (OWASP Top 10)</span><span class="skill-badge">Mobile (iOS/Android)</span><span class="skill-badge">API Security (REST/SOAP)</span>
-            <span class="skill-badge">Business Logic Flaws</span><span class="skill-badge">Threat Modeling</span><span class="skill-badge">Zero‑day Discovery</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-tools"></i> VAPT & Tools</h3>
-          <div class="badge-container">
-            <span class="skill-badge">Burp Suite Pro</span><span class="skill-badge">NMAP</span><span class="skill-badge">SQLmap</span><span class="skill-badge">MobSF</span>
-            <span class="skill-badge">OWASP ZAP</span><span class="skill-badge">Metasploit</span><span class="skill-badge">Android Studio/ADB</span><span class="skill-badge">MEMU</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-shield-alt"></i> Governance & Compliance</h3>
-          <div class="badge-container">
-            <span class="skill-badge">ISO 27001</span><span class="skill-badge">RBI Cybersecurity Framework</span><span class="skill-badge">GRC Audits</span>
-            <span class="skill-badge">MITRE ATT&CK</span><span class="skill-badge">SDLC Integration</span><span class="skill-badge">Incident Handling</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Scripting</h3>
-          <div class="badge-container">
-            <span class="skill-badge">Python</span><span class="skill-badge">JavaScript</span><span class="skill-badge">SQL</span><span class="skill-badge">Bash</span><span class="skill-badge">HTML/CSS</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Credentials: Certifications & Education -->
-  <section id="creds">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-certificate"></i> Education & Certifications</h2>
-      <div class="grid-2">
-        <div class="glass-card">
-          <h3 style="font-size: 1.4rem; margin-bottom: 1rem;"><i class="fas fa-graduation-cap"></i> Education</h3>
-          <p><strong>B.Tech (Computer Sciences)</strong><br>Manav Rachna University, Faridabad | 2018–2022<br>CGPA: 7.6</p>
-        </div>
-        <div class="glass-card">
-          <h3 style="font-size: 1.4rem; margin-bottom: 1rem;"><i class="fas fa-award"></i> Certifications</h3>
-          <p><strong>CEH (Certified Ethical Hacker)</strong> – EC-Council (Updated Nov 2025)<br>
-          <strong>CSCP</strong> – Secureyes, 2024<br>
-          <strong>CCNA Security</strong> – Cisco, 2021</p>
-        </div>
-        <div class="glass-card">
-          <h3 style="font-size: 1.4rem; margin-bottom: 1rem;"><i class="fas fa-chart-simple"></i> Testing Highlights</h3>
-          <ul style="margin-left: 1.2rem;">
-            <li>✅ Government application penetration testing</li>
-            <li>✅ Banking system assessments (internal apps, APIs, mobile)</li>
-            <li>✅ AI security testing (prompt injection, LLM security)</li>
-            <li>✅ 120+ Web, 50+ Mobile, 40+ APIs assessed</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact section -->
-  <section id="connect">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-address-card"></i> Let’s Connect</h2>
-      <div class="contact-area">
-        <div>
-          <p><i class="fas fa-phone-alt" style="width: 28px; color:#2dd4bf;"></i> +91-8800741590</p>
-          <p><i class="fas fa-envelope" style="width: 28px; color:#2dd4bf;"></i> wahib.humzahoo@gmail.com</p>
-          <p><i class="fas fa-map-marker-alt" style="width: 28px; color:#2dd4bf;"></i> New Delhi, India</p>
-          <p><i class="fab fa-linkedin" style="width: 28px; color:#2dd4bf;"></i> linkedin.com/in/wahib-sec</p>
-        </div>
-        <div style="max-width: 380px;">
-          <p>Open for security consulting, VAPT engagements, and collaboration. Let’s secure your digital assets with manual-first approach.</p>
-          <a href="mailto:wahib.humzahoo@gmail.com" class="btn btn-primary" style="margin-top: 0.8rem;"><i class="fas fa-paper-plane"></i> Drop a message</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <p>© 2025 Wahib Humzahoo — Information Security Consultant | <i class="fas fa-shield-hog"></i> Manual VAPT | GRC | API & AI Security</p>
-    <p style="margin-top: 6px; font-size: 0.7rem;">CEH | CSCP | CCNA Security | OWASP Practitioner</p>
-  </div>
-</footer>
-
-<script>
-  // smooth nav scroll
-  document.querySelectorAll('.nav-links a, .hero-buttons a[href^="#"], .btn[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const hash = this.getAttribute('href');
-      if (hash && hash.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(hash);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-</script>
+    <!-- smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === "#" || targetId === "#home") { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); return; }
+                if(targetId && targetId !== "#") {
+                    const targetElem = document.querySelector(targetId);
+                    if(targetElem) {
+                        e.preventDefault();
+                        targetElem.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                }
+            });
+        });
+        // fake download button hint
+        const resumeBtn = document.querySelector('.btn-outline-light');
+        if(resumeBtn) {
+            resumeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert("📄 Full CV / Resume can be downloaded from contact. For demo, contact Wahib directly.\nwahib.humzahoo@gmail.com");
+            });
+        }
+    </script>
 </body>
 </html>
