@@ -22,7 +22,6 @@
             scroll-behavior: smooth;
         }
 
-        /* custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -40,7 +39,6 @@
             padding: 0 28px;
         }
 
-        /* Glassmorphism / cards */
         .glass-card {
             background: rgba(18, 22, 40, 0.65);
             backdrop-filter: blur(4px);
@@ -72,12 +70,12 @@
             color: transparent;
         }
 
-        /* navigation */
         .nav-links a {
             color: #cbd5ff;
             font-weight: 500;
             transition: 0.2s;
             font-size: 0.95rem;
+            text-decoration: none;
         }
         .nav-links a:hover {
             color: white;
@@ -95,6 +93,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
         .btn-outline-light:hover {
             background: #1e2a4e;
@@ -198,11 +197,12 @@
                         <span><i class="fas fa-phone-alt"></i> +91-8800741590</span>
                         <span><i class="fas fa-envelope"></i> wahib.humzahoo@gmail.com</span>
                     </div>
-                    <p style="max-width: 85%; margin-bottom: 20px;">Information Security Consultant with <strong class="gradient-text">4+ years of hands-on experience</strong> in Application Security, VAPT, API & Mobile security. Specializing in manual pentesting, business logic flaws, and AI security testing. Trusted by Central Government & leading banks.</p>
+                    <p style="max-width: 85%; margin-bottom: 20px;">Information Security Consultant with <strong class="gradient-text">4+ years of hands-on experience</strong> in Application Security, VAPT, API & Mobile security. Specializing in manual pentesting, business logic flaws, and AI security testing. Trusted by Central Government & leading banks. <strong>Conducted 10+ GRC audits</strong> across ISO 27001, RBI, and government frameworks.</p>
                     <div style="display: flex; gap: 14px; flex-wrap: wrap;">
                         <span class="badge"><i class="fab fa-js"></i> CEH Certified</span>
                         <span class="badge"><i class="fas fa-laptop-code"></i> OWASP Top10</span>
                         <span class="badge"><i class="fas fa-cloud-upload-alt"></i> MITRE ATT&CK</span>
+                        <span class="badge"><i class="fas fa-clipboard-list"></i> ISO 27001 LA</span>
                     </div>
                 </div>
                 <div style="flex: 0.8; text-align: center;">
@@ -215,13 +215,13 @@
         </div>
     </section>
 
-    <!-- Stats / Key Metrics -->
+    <!-- Stats / Key Metrics (updated with GRC audits) -->
     <div class="container" style="margin-bottom: 50px;">
         <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 22px;">
             <div class="stat-card"><i class="fas fa-globe" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">120+</h2><p>Web Applications tested</p></div>
             <div class="stat-card"><i class="fas fa-mobile-alt" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">50+</h2><p>Mobile Apps (iOS/Android)</p></div>
             <div class="stat-card"><i class="fas fa-plug" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">40+</h2><p>APIs (REST/SOAP)</p></div>
-            <div class="stat-card"><i class="fas fa-building" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">25+</h2><p>Enterprise Engagements</p></div>
+            <div class="stat-card"><i class="fas fa-clipboard-list" style="font-size: 2rem; color: #608eff;"></i><h2 style="margin-top: 12px; font-size: 2rem;">10+</h2><p>GRC Audits (ISO 27001, RBI, etc.)</p></div>
         </div>
     </div>
 
@@ -242,7 +242,7 @@
                 <ul style="margin-top: 12px; list-style-type: none; padding-left: 0;">
                     <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff; width: 22px;"></i> Deep-dive manual penetration testing of high-stakes citizen-facing web portals & intranet apps serving millions.</li>
                     <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> Multi-platform VAPT: Web, Android/iOS mobile apps, REST/SOAP APIs – uncovered business logic flaws & potential zero-day vectors.</li>
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> GRC compliance audits (ISO 27001, NICNET Cyber Security Framework, Aadhaar compliance).</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> GRC compliance audits (ISO 27001, NICNET Cyber Security Framework, Aadhaar compliance) – <strong>10+ audits completed</strong>.</li>
                     <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> <strong>AI Security Testing:</strong> Conducted red-team style testing on AI-driven applications and mitigation strategies.</li>
                     <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #4f8eff;"></i> Authored enterprise-grade VAPT reports with risk prioritization and strategic recommendations for senior government stakeholders.</li>
                 </ul>
@@ -279,15 +279,15 @@
             </div>
         </div>
         <div style="margin-top: 24px; background: linear-gradient(90deg, #10172a, #0a0e1c); border-radius: 30px; padding: 20px; text-align: center;">
-            <i class="fas fa-chart-line" style="font-size: 1.4rem;"></i> <strong>Total Experience:</strong> 4 years+ in VAPT, application security, and GRC consulting.
+            <i class="fas fa-chart-line" style="font-size: 1.4rem;"></i> <strong>Total Experience:</strong> 4 years+ in VAPT, application security, and GRC consulting (10+ formal audits).
         </div>
     </section>
 
-    <!-- DETAILED CLIENT ENGAGEMENTS section as requested -->
+    <!-- DETAILED CLIENT ENGAGEMENTS section -->
     <section id="clients" class="container" style="margin-bottom: 60px;">
         <div style="text-align: center; margin-bottom: 40px;">
             <h2 style="font-size: 2rem; font-weight: 700;"><span class="gradient-text">Key Client Engagements</span> & Government Projects</h2>
-            <p>Trusted by Central Government, Banking, and Enterprise sectors for high-stakes security assessments</p>
+            <p>Trusted by Central Government, Banking, and Enterprise sectors for high-stakes security assessments & GRC audits</p>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
             <div class="engagement-card">
@@ -315,18 +315,19 @@
                 <div style="margin-top: 14px;"><span class="badge">✨ 40+ APIs tested</span></div>
             </div>
         </div>
-        <!-- additional highlights -->
+        <!-- additional highlights with GRC emphasis -->
         <div style="margin-top: 32px; background: #0c1122; border-radius: 24px; padding: 20px 24px;">
             <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;">
                 <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>120+ Web apps</strong> | complete life cycle VAPT</div>
                 <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>50+ Mobile apps</strong> | OWASP MSTG</div>
                 <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>40+ APIs</strong> (REST/SOAP/GraphQL)</div>
+                <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>10+ GRC audits</strong> (ISO 27001, RBI, Govt frameworks)</div>
                 <div><i class="fas fa-check-circle" style="color: #608eff;"></i> <strong>Zero-day discovery</strong> mindset & manual logic flaws</div>
             </div>
         </div>
     </section>
 
-    <!-- Skills, Tools & Certifications -->
+    <!-- Skills, Tools & Certifications (updated with ISO 27001 Lead Auditor) -->
     <section id="skills" class="container" style="margin-bottom: 60px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
             <!-- left side: core skills -->
@@ -345,16 +346,17 @@
                     <li>✔ Business Logic Flaw Analysis & Zero-day approach</li>
                     <li>✔ OWASP Top10 (Web, API, Mobile) & MASVS</li>
                     <li>✔ Security Hardening & Vulnerability Prioritization</li>
-                    <li>✔ GRC Audits (ISO 27001, RBI framework)</li>
+                    <li>✔ GRC Audits (ISO 27001, RBI framework) – 10+ audits</li>
                 </ul>
             </div>
-            <!-- right side: certs + education -->
+            <!-- right side: certs + education (ISO 27001 Lead Auditor added) -->
             <div class="glass-card" style="padding: 28px;">
                 <h3><i class="fas fa-certificate"></i> Certifications & Accreditations</h3>
                 <div style="margin: 18px 0;">
                     <p><i class="fab fa-empire"></i> <strong>CEH v12</strong> – Certified Ethical Hacker (EC-Council) | Nov 2025</p>
-                    <p><i class="fas fa-shield-alt"></i> <strong>CSCP</strong> – Cyber Security Certification Program (Secureyes) 2024</p>
-                    <p><i class="fas fa-network-wired"></i> <strong>CCNA Security</strong> – Cisco Certified Network Associate Security (2021)</p>
+                    <p><i class="fas fa-clipboard-check" style="color:#6c9eff;"></i> <strong>ISO 27001 Lead Auditor</strong> – PECB / Certified | 2024</p>
+                    <p><i class="fas fa-shield-alt"></i> <strong>CSCP</strong> – Cyber Security Certification Program (Secureyes) | 2024</p>
+                    <p><i class="fas fa-network-wired"></i> <strong>CCNA Security</strong> – Cisco Certified Network Associate Security | 2021</p>
                 </div>
                 <hr style="margin: 20px 0; border-color: #212d4f;">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
@@ -362,6 +364,7 @@
                 <div style="margin-top: 20px;">
                     <span class="badge"><i class="fas fa-award"></i> Aadhaar Compliance</span>
                     <span class="badge"><i class="fas fa-chart-line"></i> RBI Cyber Framework</span>
+                    <span class="badge"><i class="fas fa-balance-scale"></i> ISO 27001 Lead Auditor</span>
                 </div>
             </div>
         </div>
@@ -376,6 +379,7 @@
                 <div><i class="fas fa-check-double"></i> Private Banking & Financial APIs</div>
                 <div><i class="fas fa-check-double"></i> Public-facing mobile apps & internal platforms</div>
                 <div><i class="fas fa-check-double"></i> AI-driven application security & mitigation</div>
+                <div><i class="fas fa-check-double"></i> ISO 27001 & GRC readiness assessments (10+ audits)</div>
             </div>
         </div>
     </div>
@@ -384,7 +388,7 @@
     <section id="contact" class="container" style="margin-bottom: 40px;">
         <div class="glass-card" style="padding: 32px; text-align: center;">
             <h2>Let's Secure Your Digital Ecosystem</h2>
-            <p style="max-width: 580px; margin: 12px auto;">Open for consulting, VAPT engagements, and security auditing. Reach out for high-assurance testing.</p>
+            <p style="max-width: 580px; margin: 12px auto;">Open for consulting, VAPT engagements, GRC audits, and security auditing. Reach out for high-assurance testing.</p>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-top: 28px;">
                 <div><i class="fas fa-envelope fa-lg"></i> wahib.humzahoo@gmail.com</div>
                 <div><i class="fas fa-phone-alt"></i> +91-8800741590</div>
@@ -400,8 +404,8 @@
 
     <footer style="text-align: center; padding: 32px 0 28px; font-size: 0.85rem; color: #8091c2;">
         <div class="container">
-            <p>© 2026 Wahib Humzahoo – Information Security Consultant | 4+ Years Experience, VAPT & Application Security Specialist</p>
-            <p style="margin-top: 8px;"><i class="fas fa-shield-haltered"></i> OWASP Top 10 | Manual Pentesting | API | Mobile | GRC</p>
+            <p>© 2026 Wahib Humzahoo – Information Security Consultant | 4+ Years Experience, VAPT & Application Security Specialist | ISO 27001 Lead Auditor</p>
+            <p style="margin-top: 8px;"><i class="fas fa-shield-haltered"></i> OWASP Top 10 | Manual Pentesting | API | Mobile | GRC | 10+ Audits</p>
         </div>
     </footer>
 
@@ -420,12 +424,11 @@
                 }
             });
         });
-        // fake download button hint
         const resumeBtn = document.querySelector('.btn-outline-light');
         if(resumeBtn) {
             resumeBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                alert("📄 Full CV / Resume can be downloaded from contact. For demo, contact Wahib directly.\nwahib.humzahoo@gmail.com");
+                alert("📄 Full CV / Resume can be downloaded on request. Contact Wahib at wahib.humzahoo@gmail.com");
             });
         }
     </script>
